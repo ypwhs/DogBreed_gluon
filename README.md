@@ -54,3 +54,10 @@ squeezenet1.0 | 1.62178872526
 alexnet | 1.77026221156
 
 可以看到 densenet 并没有那么好，于是我只使用 inceptionv3 和 resnet152_v1 的特征，进行了融合迁移学习，获得了 0.27143 的分数。
+
+# Update
+
+使用 [Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) 进行训练，使用了 inceptionv3 和 resnet152_v1，最终获得了 0.00398 的分数。
+
+* [get_features_v3.ipynb](get_features_v3.ipynb) 导出所有预训练模型输出的特征
+* [stanford.ipynb](stanford.ipynb) 导出 Stanford Dogs Dataset 对应的特征，然后进行迁移学习，最后在测试集上进行预测
